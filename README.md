@@ -6,7 +6,12 @@ This is a component to provide a "launcher" type app that is similar to the one 
 2. The actions/options associated to the need you selected
 3. An information page with a description line of the action/option, optional details for the action, and a button to launch to the service
 
+The following is example screen showing the 3 pieces of this "launcher" component.
+
+![alt text](https://raw.githubusercontent.com/thedges/PSPageLauncher/master/PSPageLauncherSnapshot1.png "Sample Image")
+
 This component is driven by information stored in 2 objects. Here is description of the objects:
+
 * <b>PSLaunchNeed</b> - this is primary one to create the need drop-down list. Parameters:
   - <b>Label</b> - value used in drop down list
   - <b>Header</b> - value used in header section of step 3
@@ -22,4 +27,3 @@ This component is driven by information stored in 2 objects. Here is description
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
 
-![alt text](https://raw.githubusercontent.com/thedges/PSPageLauncher/master/PSPageLauncherSnapshot1.png "Sample Image")
