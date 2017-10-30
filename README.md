@@ -6,5 +6,6 @@ Sample component to pay a bill via Authorize.Net
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
 
+<br/>
 
 ![alt text](https://raw.githubusercontent.com/thedges/PSPageLauncher/master/PSPageLauncherSnapshot1.png "Sample Image")
