@@ -6,7 +6,7 @@ This is a component to provide a "launcher" type app that is similar to the one 
 2. The actions/options associated to the need you selected
 3. An information page with a description line of the action/option, optional details for the action, and a button to launch to the service
 
-The following is example screen showing the 3 pieces of this "launcher" component.
+The following is example screen showing the 3 pieces of this "launcher" component. The two left-hand images show the component in a normal Community template and the right-hand image is same accessed from mobile app.
 
 ![alt text](https://raw.githubusercontent.com/thedges/PSPageLauncher/master/PSPageLauncherSnapshot1.png "Sample Image")
 
