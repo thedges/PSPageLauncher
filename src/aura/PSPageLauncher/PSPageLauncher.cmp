@@ -1,0 +1,69 @@
+<aura:component controller="PSPageLauncherController" implements="force:appHostable,forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <aura:attribute name="errorMsg" type="String" />
+    <aura:attribute name="selectedNeed" type="String" />
+    <aura:attribute name="selectedNeedHeader" type="String" />
+    <aura:attribute name="actionDesc" type="String" />
+    <aura:attribute name="actionExpl" type="String" />
+    <aura:attribute name="needList" type="List" />
+    <aura:attribute name="selectedAction" type="String" />
+    <aura:attribute name="actionList" type="List" />
+    <aura:attribute name="pageURL" type="String" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div aura:id="mainapp">
+        <aura:if isTrue="{!v.errorMsg.length > 0}">
+            <ui:message title="Error" severity="error" closable="true">
+                {!v.errorMsg}
+            </ui:message>
+        </aura:if>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+            <div class="slds-col--padded-medium slds-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-3">
+                <lightning:card >
+                    <aura:set attribute="title">
+                        <img src="{!$Resource.PSPageLauncher + '/step-1.gif'}" height="40" width="40" />&nbsp;I Need To...
+                    </aura:set>
+                    <p class="slds-p-horizontal--small">
+                        <lightning:select aura:id="needSelect" name="needSelect" label="" value="{!v.selectedNeed}" onchange="{!c.onNeedChange}">
+                            <aura:iteration items="{!v.needList}" var="n">
+                                <option value="{!n.Label__c}">{!n.Label__c}</option>
+                            </aura:iteration>
+                        </lightning:select>
+                    </p>
+                </lightning:card>
+                <div class="slds-m-bottom--medium"></div>
+            </div>
+            <div class="slds-col--padded-medium slds-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-3">
+                <lightning:card >
+                    <aura:set attribute="title">
+                        <img src="{!$Resource.PSPageLauncher + '/step-2.gif'}" height="40" width="40" />&nbsp;{!v.selectedNeed}...
+                    </aura:set>
+                    <p class="slds-p-horizontal--small">
+                        <lightning:select aura:id="actionSelect" name="actionSelect" label="" value="{!v.selectedAction}"  onchange="{!c.onActionChange}">
+                            <aura:iteration items="{!v.actionList}" var="a">
+                                <option value="{!a.Label__c}">{!a.Label__c}</option>
+                            </aura:iteration>
+                        </lightning:select>
+                    </p>
+                </lightning:card>
+                <div class="slds-m-bottom--medium"></div>
+            </div>
+            <div class="slds-col--padded-medium slds-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-3">
+                <lightning:card >
+                    <aura:set attribute="title">
+                        <img src="{!$Resource.PSPageLauncher + '/step-3.gif'}" height="40" width="40" />&nbsp;{!v.selectedNeedHeader} Now
+                    </aura:set>
+                    <p class="slds-p-horizontal--small">
+                    	<aura:renderIf isTrue="{!v.actionDesc != null}">
+                    		<div class="action-desc slds-m-bottom--medium">{!v.actionDesc}</div>
+                    	</aura:renderIf>
+                    	<aura:renderIf isTrue="{!v.actionExpl != null}">
+                    		<div class="action-expl slds-m-bottom--medium">{!v.actionExpl}</div>
+                    	</aura:renderIf>
+                        <lightning:button variant="brand" aura:id="actionBtn" label="{!v.selectedNeedHeader}" onclick="{!c.handleActionButton}" />
+                    </p>
+                </lightning:card>
+            </div>
+        </div>
+    </div>
+</aura:component>

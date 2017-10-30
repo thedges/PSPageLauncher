@@ -1,0 +1,8 @@
+.THIS .action-expl {
+  font-style: italic;
+}
+
+.THIS .slds-form-element__label {
+  display: flex;
+  margin-right: 0px;
+}
