@@ -13,5 +13,9 @@
         <members>PSLaunchNeed__c</members>
         <name>CustomObject</name>
     </types>
+    <types>
+        <members>PSPageLauncher</members>
+        <name>StaticResource</name>
+    </types>
     <version>39.0</version>
 </Package>
