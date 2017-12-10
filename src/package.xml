@@ -14,6 +14,10 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>PSLaunchNeed__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
         <members>PSPageLauncher</members>
         <name>StaticResource</name>
     </types>
