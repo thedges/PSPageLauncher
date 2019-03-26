@@ -1,5 +1,7 @@
 # PSPageLauncher
 
+THIS SOFTWARE IS COVERED BY [THIS DISCLAIMER](https://raw.githubusercontent.com/thedges/Disclaimer/master/disclaimer.txt).
+
 This is a component to provide a "launcher" type app that is similar to the one at San Diego's [Get It Done](https://www.sandiego.gov/) site.  The focus of the component is 3 parts:
 
 1. What is your "need"
